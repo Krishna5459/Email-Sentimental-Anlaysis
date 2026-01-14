@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background: linear-gradient(180deg, #020617, #020617 120px, #eaf4fb 120px);
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: #020617;
+  color: white;
+  padding: 18px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.nav-left img {
+  height: 32px;
+}
+
+.nav-center button {
+  background: none;
+  border: none;
+  color: white;
+  margin: 0 18px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.nav-right {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.logout {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ===== CONTENT ===== */
+.content {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: white;
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== MAIL LIST ===== */
+.mail-row {
+  padding: 16px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  background: #f8fafc;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.mail-row:hover {
+  background: #eef2ff;
+}
+
+.subject {
+  font-size: 14px;
+  color: #475569;
+}
+
+.right-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.date {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.sentiment {
+  font-size: 18px;
+}
+
+/* ===== COMPOSE ===== */
+.compose-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.compose-field input,
+.compose-field textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid #cbd5e1;
+  font-size: 15px;
+}
+
+.compose-field textarea {
+  min-height: 220px;
+  resize: vertical;
+}
+
+.compose-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ===== EMAIL VIEW ===== */
+.mail-body {
+  background: #f8fafc;
+  padding: 18px;
+  border-radius: 14px;
+  margin: 16px 0;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.primary {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.secondary {
+  background: #020617;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.back {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+/* ===== ANALYSIS ===== */
+.analysis {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 14px;
+}
+
+.analysis.positive {
+  background: #ecfdf5;
+}
+
+.analysis.neutral {
+  background: #fefce8;
+}
+
+.analysis.negative {
+  background: #fef2f2;
+}

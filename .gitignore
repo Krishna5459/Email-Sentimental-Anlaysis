@@ -1,0 +1,5 @@
+node_modules/
+esa-backend/node_modules/
+esa-frontend/node_modules/
+.env
+esa-backend/.env
