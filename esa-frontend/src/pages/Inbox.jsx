@@ -100,7 +100,7 @@ export default function Inbox() {
   const sentimentIcon = (s) =>
     s === "positive" ? "🟢" : s === "neutral" ? "🟡" : "🔴";
 
-  return (
+ return (
     <div className="inbox-page">
       {/* ===== NAVBAR ===== */}
       <nav className="navbar">
@@ -128,7 +128,7 @@ export default function Inbox() {
         {/* ===== COMPOSE ===== */}
         {view === "compose" && (
           <div className="card compose-card">
-            <h2>New Message</h2>
+            <h2 className="head-title">New Message</h2>
 
             <form className="compose-form" onSubmit={handleSend}>
               <div className="compose-field">
@@ -169,7 +169,7 @@ export default function Inbox() {
         {/* ===== INBOX / SENT ===== */}
         {(view === "inbox" || view === "sent") && (
           <div className="card">
-            <h2>{view === "inbox" ? "Inbox" : "Sent"}</h2>
+            <h2 className="head-title">{view === "inbox" ? "Inbox" : "Sent"}</h2>
 
             {(view === "inbox" ? inboxEmails : sentEmails).map((mail) => (
               <div
@@ -206,18 +206,22 @@ export default function Inbox() {
         {view === "email" && selectedEmail && (
           <div className="card">
             <button className="back" onClick={() => setView("inbox")}>
-              ← Back
+             Back
             </button>
 
+            <div className="container">
             <h2>{selectedEmail.subject}</h2>
 
             <div className="mail-body">
+              <div className="mail-add">
+
               <p><strong>From:</strong> {selectedEmail.from}</p>
               <p><strong>To:</strong> {selectedEmail.to}</p>
               <p className="date">
                 {new Date(selectedEmail.createdAt).toLocaleString()}
               </p>
-              <p>{selectedEmail.body}</p>
+              </div>
+              <p className="p1">{selectedEmail.body}</p>
             </div>
 
             <div className="actions">
@@ -247,9 +251,11 @@ export default function Inbox() {
                 <p>{selectedEmail.recommendation}</p>
               </div>
             )}
+            </div>
           </div>
         )}
       </div>
     </div>
   );
+
 }
